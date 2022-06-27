@@ -16,7 +16,6 @@ export const QUERY = gql`
       author
       body
       image
-      postedAt
     }
   }
 `
@@ -29,7 +28,6 @@ const UPDATE_POST_MUTATION = gql`
       author
       body
       image
-      postedAt
     }
   }
 `

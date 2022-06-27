@@ -88,9 +88,6 @@ const Post = ({ post }) => {
             </tr><tr>
               <th>Image</th>
               <td>{post.image}</td>
-            </tr><tr>
-              <th>Posted at</th>
-              <td>{timeTag(post.postedAt)}</td>
             </tr>
           </tbody>
         </table>

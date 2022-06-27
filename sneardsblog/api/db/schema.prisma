@@ -19,7 +19,7 @@ model Post {
   body     String
   image    String?
   tags     Tag[]
-  postedAt DateTime @default(now())
+  //postedAt DateTime @default(now())
 }
 
 model Tag {

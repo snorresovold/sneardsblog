@@ -24,14 +24,14 @@ describe('posts', () => {
     const result = await createPost({
       input: {
         title: 'String',
-        slug: 'String871950',
+        slug: 'String6217664',
         author: 'String',
         body: 'String',
       },
     })
 
     expect(result.title).toEqual('String')
-    expect(result.slug).toEqual('String871950')
+    expect(result.slug).toEqual('String6217664')
     expect(result.author).toEqual('String')
     expect(result.body).toEqual('String')
   })

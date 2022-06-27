@@ -7,7 +7,6 @@ export const schema = gql`
     body: String!
     image: String
     tags: [Tag]!
-    postedAt: DateTime!
   }
 
   type Query {
@@ -21,7 +20,6 @@ export const schema = gql`
     author: String!
     body: String!
     image: String
-    postedAt: DateTime!
   }
 
   input UpdatePostInput {
@@ -30,7 +28,6 @@ export const schema = gql`
     author: String
     body: String
     image: String
-    postedAt: DateTime
   }
 
   type Mutation {

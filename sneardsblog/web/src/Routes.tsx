@@ -9,13 +9,26 @@
 
 import { Set, Router, Route, Private } from '@redwoodjs/router'
 
+import PostsLayout from 'src/layouts/PostsLayout'
+
 import TagsLayout from 'src/layouts/TagsLayout'
 
-import PostsLayout from 'src/layouts/PostsLayout'
 
 const Routes = () => {
   return (
     <Router>
+
+      <Set wrap={PostsLayout}>
+
+        <Route path="/posts/new" page={PostNewPostPage} name="newPost" />
+
+        <Route path="/posts/{id:Int}/edit" page={PostEditPostPage} name="editPost" />
+
+        <Route path="/posts/{id:Int}" page={PostPostPage} name="post" />
+
+        <Route path="/posts" page={PostPostsPage} name="posts" />
+
+      </Set>
 
       <Route path="/" page={HomePage} name="home" />
 
@@ -25,13 +38,6 @@ const Routes = () => {
           <Route path="/tags/{id:Int}/edit" page={TagEditTagPage} name="editTag" />
           <Route path="/tags/{id:Int}" page={TagTagPage} name="tag" />
           <Route path="/tags" page={TagTagsPage} name="tags" />
-        </Set>
-
-        <Set wrap={PostsLayout}>
-          <Route path="/posts/new" page={PostNewPostPage} name="newPost" />
-          <Route path="/posts/{id:Int}/edit" page={PostEditPostPage} name="editPost" />
-          <Route path="/posts/{id:Int}" page={PostPostPage} name="post" />
-          <Route path="/posts" page={PostPostsPage} name="posts" />
         </Set>
       </Private>
 
