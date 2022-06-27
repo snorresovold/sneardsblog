@@ -16,7 +16,8 @@ import PostsLayout from 'src/layouts/PostsLayout'
 const Routes = () => {
   return (
     <Router>
-      <Route path="/home" page={HomePage} name="home" />
+
+      <Route path="/" page={HomePage} name="home" />
 
       <Private unauthenticated='home'>
         <Set wrap={TagsLayout}>
@@ -39,6 +40,7 @@ const Routes = () => {
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
       <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
       <Route notfound page={NotFoundPage} />
+
     </Router>
   )
 }
